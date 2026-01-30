@@ -1,0 +1,14 @@
+# Dataset configuration for YOLOv8
+# Power Infrastructure Fault Detection using UAV imagery
+
+path: data
+
+train: images/train
+val: images/val
+
+nc: 3
+
+names:
+  0: insulator_fault
+  1: broken_conductor
+  2: vegetation_encroachment
