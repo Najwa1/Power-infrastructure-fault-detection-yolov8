@@ -1,27 +1,32 @@
 """
-train.py
-
-This script trains a YOLOv8 model to detect faults in
-overhead power transmission infrastructure using UAV imagery.
+Training script for YOLOv8-based power infrastructure fault detection.
+This script trains an object detection model on UAV imagery.
 """
 
-from ultralytics import YOLO
 import os
+from ultralytics import YOLO
 
 
 def main():
     """
-    Main training pipeline.
+    Main training function.
     """
-    print("Starting YOLOv8 training pipeline...")
 
-    # Load a pretrained YOLOv8 model
-    model = YOLO("yolov8n.pt")
+    # -----------------------------
+    # 1. Load YOLOv8 model
+    # -----------------------------
+    # Using a pretrained YOLOv8 small model for transfer learning
+    model = YOLO("yolov8s.pt")
 
-    # Path to dataset configuration file
-    data_config = os.path.join("data", "dataset.yaml")
+    # -----------------------------
+    # 2. Dataset configuration
+    # -----------------------------
+    # Path to dataset.yaml file
+    data_config = os.path.join("data", "data.yaml")
 
-    # Train the model
+    # -----------------------------
+    # 3. Train the model
+    # -----------------------------
     model.train(
         data=data_config,
         epochs=50,
