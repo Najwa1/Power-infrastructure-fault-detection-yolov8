@@ -7,7 +7,15 @@ In this project, we will build an end-to-end computer vision system that automat
 
 
 
-This repository is written as a learning-first, engineering-focused walkthrough.
+**Dataset**
+
+This project uses a sample from InsPLAD, a Power Line Asset Inspection Dataset and Benchmark containing 10,607 high-resolution Unmanned Aerial Vehicles color images. It is the first large real-world dataset and benchmark for power line asset inspection with multiple components and defects for various computer vision tasks (*André Luis et al, 2023*).
+
+
+
+Only a small subset of the dataset is included in this repository for demonstration purposes.
+
+The full dataset is publicly available at **https://github.com/andreluizbvs/InsPLAD/.**
 
 
 
@@ -42,6 +50,8 @@ data/
 
 
 The data.yaml file defines training and validation paths and class names.
+
+
 
 
 
